@@ -5,7 +5,7 @@ import os
 
 
 def choose_cookie_file():
-    print("🔐 Choose cookie file (.txt Netscape format)")
+    print("Choose cookie file (.txt Netscape format)")
     Tk().withdraw()
     return filedialog.askopenfilename()
 
@@ -28,13 +28,13 @@ def load_cookies(path):
 
 async def main():
     cookie_path = choose_cookie_file()
-    username = input("👤 Enter Instagram username: ").strip()
-    amount = int(input("🖼️ Number of images to download: ").strip())
+    username = input("Enter Instagram username: ").strip()
+    amount = int(input("Number of images to download: ").strip())
 
     cookies = load_cookies(cookie_path)
 
     async with async_playwright() as pw:
-        print("🚀 Launching browser...")
+        print("Launching browser...")
         browser = await pw.chromium.launch(headless=False)
         context = await browser.new_context()
 
@@ -70,7 +70,7 @@ async def main():
                 break
             last_len = len(images)
 
-        print(f"📥 Found {len(images)} images, downloading...")
+        print(f"Found {len(images)} images, downloading...")
 
         images = list(images)[:amount]
         for i, url in enumerate(images, 1):
@@ -79,7 +79,7 @@ async def main():
                 f.write(await resp.body())
             print(f"⬇ Downloaded {i}/{amount}")
 
-        print("🎉 Done!")
+        print("Done!")
         await browser.close()
 
 
