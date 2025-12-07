@@ -88,10 +88,10 @@ async def main():
                             logger.warning("❌ Số lượng phải là số nguyên dương!")
                             continue
                         amount = int(amount_str)
-                        await download_profile(page, username, amount)
+                        await download_profile(page, username, amount, media_type="all")
 
                     elif choice == "2":
-                        await download_profile(page, username, 999999)
+                        await download_profile(page, username, 999999, media_type="videos")
 
                     elif choice == "3":
                         await download_stories(page, username)

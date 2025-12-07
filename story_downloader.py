@@ -34,7 +34,7 @@ async def download_stories(page, username):
             logger.warning(f"⚠️  @{username} không có story hoặc story đã hết hạn!")
             return
 
-        folder = f"{username}_stories"
+        folder = f"{username}/STORY"
         ensure_dir(folder)
 
         # Extract story items
