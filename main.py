@@ -40,10 +40,10 @@ async def main():
             print("\n===========================")
             print(" 📥 Instagram Downloader Menu")
             print("===========================\n")
-            print("1️⃣  Tải toàn bộ ảnh + video (theo thứ tự)")
-            print("2️⃣  Tải Reels / Video")
-            print("3️⃣  Tải Story")
-            print("4️⃣  Thoát\n")
+            print("1  Tải toàn bộ ảnh + video (theo thứ tự)")
+            print("2  Tải Reels / Video")
+            print("3  Tải Story")
+            print("4  Thoát\n")
 
             choice = input("👉 Chọn chức năng: ")
 
