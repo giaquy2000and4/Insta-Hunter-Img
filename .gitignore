@@ -1,7 +1,43 @@
+# Config files
 *.json
 *.env
 *.ini
 *.cfg
 
+# Cookie files
 *cookies*.txt
+cookies.txt
 
+# Downloaded media folders
+*/
+!.gitkeep
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Playwright
+.playwright/
